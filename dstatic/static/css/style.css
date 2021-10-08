@@ -1,0 +1,42 @@
+.navbar_style{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align:center;
+    
+}
+
+.foto_style{
+    border-radius: 100px;
+}
+.nav-link active{
+    color: white;
+}
+.d-flex{
+    color: white;
+}
+.textNew{
+    text-align: left; 
+    padding-left:5px; 
+    padding-top: 15px;
+}
+.card mt-5{
+    width: 100;
+}
+.comment_style{
+    color: white;
+    text-decoration: none; 
+}
+.articl_style{
+    padding-top: 15px;
+}
+.cont{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.User_style{
+    color: white;
+}
+.Exit_style{
+    color:white; 
+    padding-left: 5px;
+}

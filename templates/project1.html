@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+        <title>
+            Project 1
+        </title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+      
+            
+                        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                            <div class="container-fluid">
+                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                                <a class="navbar-brand" >
+                                    <img src="{% static 'img/icon.jpg'%}" class="foto_style" alt="logo" width="40" height="40" >
+                                    <a href="project1.html" class="navbar_style"  >Project Blog</a></a>
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white" >
+                                  <li class="nav-item text-white">
+                                    <a class="nav-link active text-white" aria-current="page" href="project1news.html">Новости</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link text-white" href="project1business.html">Бизнес</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link text-white" href="project1Internet.html">Интернет</a>
+                                  </li>
+                                </ul>
+                                <div class="d-flex" id="change">
+                                    <button class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="change">Регистрация</button>
+                                    <button class="btn btn btn-warning mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal1" >Войти</button>
+                                </div>
+                              </div>
+                            </div>
+                        </nav>
+                        <!-- Modal registration -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="row mb-3">
+                                                <label for="inputLogin" class="col-sm-2 col-form-label" >Login</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputLogin">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputPass" class="col-sm-2 col-form-label">Password</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" class="form-control" id="inputPass">
+                                                </div>
+                                            </div>
+                                        </form>
+                                        
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                        <button type="button" class="btn btn-primary" onclick="register()">Сохранить пользователя</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+
+                        <!-- Modal sign -->
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                          <div class="modal-dialog">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel1">Вход в аккаунт</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                  </div>
+                                  <div class="modal-body">
+                                      <form action="">
+                                          <div class="row mb-3">
+                                              <label for="inputText" class="col-sm-2 col-form-label" id="username" >username</label>
+                                              <div class="col-sm-10">
+                                                  <input type="text" class="form-control" id="inputText">
+                                              </div>
+                                          </div>
+                                          <div class="row mb-3">
+                                              <label for="inputPass1" class="col-sm-2 col-form-label" id="password">password</label>
+                                              <div class="col-sm-10">
+                                                  <input type="password" class="form-control" id="inputPass1">
+                                              </div>
+                                          </div>
+                                      </form>
+                                      
+
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                      <button type="button" class="btn btn-primary" onclick="SignUser()">Войти</button>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                         <!-- end SignModal -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-sm-8">
+                    <h5 class="textNew">-----НОВОЕ НА САЙТЕ-----------</h5>
+                  <div class="card mt-3">
+                    <div class="card-body ">
+                      <h5 class="card-title">Реальные люди, выигравшие лотерею с 2011 по 2021</h5>
+                      <img src="{% static 'img/loto.jpg'%} class='w-100'">
+                      <p class="card-text">Расскажем про счастливчиков из-за границы, которые сорвали джек-пот и выиграли крупные суммы в лотерею. Победители этого года.</p>
+                      <a href="#" class="btn btn-primary">Читать запись полностью</a>
+                    </div>
+                  </div>
+                  <div class="card mt-3">
+                    <div class="card-body ">
+                      <h5 class="card-title">Бизнес-идеи для самозанятых</h5>
+                      <img src="Idea.jpg"class="w-100">
+                      <p class="card-text">Читайте обзор лучших бизнес-идей для самозанятых и особенности этого налогового режима. Топовые варианты, как заработать на дому с минимальными вложениями</p>
+                      <a href="#" class="btn btn-primary">Читать запись полностью</a>
+                    </div>
+                  </div>
+                  <div class="card mt-3">
+                    <div class="card-body ">
+                      <h5 class="card-title">Как купить недвижимость за рубежом?</h5>
+                      <img src="home.jpg"class="w-100">
+                      <p class="card-text">Мечта многих - купить недвижимость где-нибудь за рубежом, на берегу моря. Где реально приобрести жилье за границей, как выбрать место, можно ли получить ВНЖ, доступна ли ипотека</p>
+                      <a href="#" class="btn btn-primary">Читать запись полностью</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-sm-4">
+                    <div class="card mt-5">
+                        <div class="card-header bg-primary ">
+                           <a href="#"  class="comment_style" > ПОПУЛЯРНЫЕ КОММЕНТАРИИ </a>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><p>Tatarmonster</p>Я наполнился дыней, но по ходу она была с незакрытым гештальтом, поэтому я на унитазе вошёл в состояние потока</li>
+                          <li class="list-group-item"><p>iDeLL</p>К сожалению этот офигенный чел проиграл бил о праве ремонта, который длился около года.</li>
+                          <li class="list-group-item"><p>Howard103</p>Набирают на "не сложную работу" людей, как правило обитающих у самого дна общества.</li>
+                        </ul>
+                      </div>
+                    <p class="articl_style">ПОПУЛЯРНЫЕ СТАТЬИ </p>
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">У нас много солнца, пожалуйста!</h5>
+                      <img src="2.jpg"class="w-100">
+                      <p class="card-text">Банальные, но неопровержимые выводы, а также акционеры крупнейших компаний и по сей день остаются уделом либералов, которые жаждут быть описаны максимально подробно..</p>
+                      <a href="#" class="btn btn-primary">Читать</a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Лес</h5>
+                      <img src="3.jpg"class="w-100">
+                      <p class="card-text">Банальные, но неопровержимые выводы, а также акционеры крупнейших компаний и по сей день остаются уделом либералов, которые жаждут быть описаны максимально подробно..</p>
+                      <a href="#" class="btn btn-primary">Читать</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="container">
+        <footer class="text-center text-white  bg-primary mt-3">
+          <!-- Grid container -->
+          <div class="container p-4"></div>
+          <!-- Grid container -->
+        
+          <!-- Copyright -->
+          <div class="text-center p-3 cont">
+            © 2021 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">Project.com</a>
+          </div>
+        </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        
+    </body>
+</html>
